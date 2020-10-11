@@ -4,6 +4,7 @@ import android.os.Build
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import androidx.annotation.ChecksSdkIntAtLeast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -33,11 +34,14 @@ class MainActivity : AppCompatActivity() {
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+        if (isAtLeastO()) {
             println(maxNumPictureInPictureActions)
         }
         loaderManager
     }
+
+    @ChecksSdkIntAtLeast(api = Build.VERSION_CODES.O)
+    fun isAtLeastO() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.O
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
