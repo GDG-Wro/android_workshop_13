@@ -1,0 +1,8 @@
+plugins {
+    id("kotlin")
+}
+
+dependencies {
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.4.10")
+    api("com.squareup.okhttp3:okhttp:4.9.0")
+}
