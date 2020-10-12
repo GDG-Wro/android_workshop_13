@@ -1,5 +1,5 @@
 rootProject.name = "GDG Workshop 13"
-include(":app", ":networking")
+include(":app", ":networking", ":maps")
 
 plugins {
     id("com.gradle.enterprise") version "3.4.1"
@@ -12,4 +12,3 @@ gradleEnterprise {
         isUploadInBackground = false
     }
 }
-include(":maps")
