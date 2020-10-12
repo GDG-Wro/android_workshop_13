@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import okhttp3.OkHttpClient
 import pl.gdg.workshop13.databinding.FragmentFirstBinding
+import java.time.LocalDate
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
@@ -34,6 +35,7 @@ class FirstFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.textviewFirst.text = BuildConfig.API_BASE_URL
         OkHttpClient()
+        LocalDate.now()
 
         binding.buttonFirst.setOnClickListener {
             findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
