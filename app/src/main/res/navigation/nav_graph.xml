@@ -13,12 +13,7 @@
 
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment">
-            <argument
-                android:name="someValue"
-                app:argType="pl.gdg.workshop13.SomeEnum"
-                app:nullable="true" />
-        </action>
+            app:destination="@id/SecondFragment" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
